@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/react-shop/static/css/main.cec27ebf.css",
+    "main.js": "/react-shop/static/js/main.cc4ef8e6.js",
+    "static/js/787.affa5bbf.chunk.js": "/react-shop/static/js/787.affa5bbf.chunk.js",
+    "static/media/404.webp": "/react-shop/static/media/404.7bd01642acc566533bbf.webp",
+    "static/media/logo_yard_sale.svg": "/react-shop/static/media/logo_yard_sale.f5c1d07e0dba172463639e02bacccd32.svg",
+    "index.html": "/react-shop/index.html",
+    "main.cec27ebf.css.map": "/react-shop/static/css/main.cec27ebf.css.map",
+    "main.cc4ef8e6.js.map": "/react-shop/static/js/main.cc4ef8e6.js.map",
+    "787.affa5bbf.chunk.js.map": "/react-shop/static/js/787.affa5bbf.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cec27ebf.css",
+    "static/js/main.cc4ef8e6.js"
+  ]
+}
