@@ -5,7 +5,7 @@ import {ProductGrid} from '../../Components/ProductGrid/ProductGrid';
 import {useGetProducts} from '../../hooks/useGetProducts';
 
 
-const API = 'http://api.escuelajs.co/api/v1/products';
+const API = 'https://api.escuelajs.co/api/v1/products';
 
 function Grid() {
     const products = useGetProducts(API);
