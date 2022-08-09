@@ -1,0 +1,75 @@
+@use '../../style/var&mixin/mymixin';
+@use '../../style/var&mixin/myvar';
+
+
+.ShoppingCartContainer{
+    background-color: white;
+    scale: 0.1;
+    visibility: hidden;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    @include mymixin.objectsPosition(flex, column, nowrap, space-evenly, center);
+    width: 32vw;
+    min-width: 360px;
+    box-shadow: 1px 1px 12px rgba(0,0,0,0.1);
+    border-radius: 20px;
+    transition: scale 0.5s;
+    z-index: 2;
+    
+}
+
+.ShoppingCartContainer:hover{
+    scale: 1;
+}
+
+.ShoppingCartContainer__header{
+    width: 100%;
+    @include mymixin.objectsPosition(flex, row, nowrap, flex-start, center);
+    padding: 15px 20px;
+}
+
+.ShoppingCartContainer__header-iconBack{
+    color: myvar.$version1;
+    width: 33px;
+    height: 32px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.ShoppingCartContainer__header-iconBack:hover{
+    color: white;
+    background-color: myvar.$version1;
+    width: 33px;
+    height: 32px;
+    border-radius: 4px;
+}
+
+.ShoppingCartContainer__header-iconBack:active{
+    scale: 0.9;
+}
+
+.ShoppingCartContainer__header-title{
+    font-weight: bold;
+    @include mymixin.LinkTextForm(myvar.$version4, myvar.$fntSizeMd, left);
+}
+
+.ShoppingCartContainer__products{
+    height: 300px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    width: 95%;
+    padding-top: 15px;
+}
+
+.ShoppingCartContainer__resumeCart{
+    width: 100%;
+    @include mymixin.objectsPosition(flex, row, nowrap, space-between, center);
+    padding: 15px 30px 0px 30px;
+    font-weight: bold;
+}
+
+.visibleShoppingCartContainer{
+    scale: 1;
+    visibility: visible;
+}

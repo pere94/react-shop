@@ -1,0 +1,63 @@
+@use '../../style/var&mixin/mymixin';
+@use '../../style/var&mixin/myvar';
+
+.containerMyAccount{
+    width: 100%;
+    max-width: 320px;
+    height: 100%;
+    @include mymixin.objectsPosition(flex, column, nowrap, center, center);
+}
+
+.containerMyAccount__h3{
+    width: 100%;
+    @include mymixin.LinkTextForm(myvar.$version4, myvar.$fntSizeMd, left);
+    margin-bottom: 40px;
+}
+
+.containerMyAccount__name{
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.containerMyAccount__name label{
+    font-weight: bold;
+    @include mymixin.LinkTextForm(myvar.$version4, myvar.$fntSizeSm, left);
+}
+
+.containerMyAccount__name-p{
+    margin-top: 10px;
+    @include mymixin.LinkTextForm(myvar.$version3, myvar.$fntSizeSm, left);
+    width: 90%;
+}
+
+.containerMyAccount__email{
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.containerMyAccount__email label{
+    font-weight: bold;
+    @include mymixin.LinkTextForm(myvar.$version4, myvar.$fntSizeSm, left);
+}
+
+.containerMyAccount__email-p{
+    margin-top: 10px;
+    @include mymixin.LinkTextForm(myvar.$version3, myvar.$fntSizeSm, left);
+    width: 90%;
+}
+
+.containerMyAccount__password{
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.containerMyAccount__password label{
+    font-weight: bold;
+    @include mymixin.LinkTextForm(myvar.$version4, myvar.$fntSizeSm, left);
+}
+
+.containerMyAccount__password-p{
+    margin-top: 10px;
+    @include mymixin.LinkTextForm(myvar.$version3, myvar.$fntSizeSm, left);
+    width: 90%;
+}

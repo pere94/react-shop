@@ -1,0 +1,70 @@
+@use '../../style/var&mixin/mymixin';
+@use '../../style/var&mixin/myvar';
+
+.NavBar__NavLinks{
+    margin-right: 30px;
+    @include mymixin.objectsPosition(flex, row, nowrap, center, center);
+}
+
+.NavBar__NavLinks__item{
+    list-style: none;
+    margin-right: 10px;
+}
+
+.NavBar__NavLinks__item a{
+    text-decoration: none;
+    @include mymixin.LinkTextForm(myvar.$version4, myvar.$fntSizeSm, center);
+    padding: 10px;
+}
+
+.NavBar__NavLinks__item a:hover{
+    text-decoration: underline;
+    border-radius: 10px;
+    border: 1px solid myvar.$version4;
+}
+
+.NavBar__NavLinks__item a:active{
+    text-decoration: underline;
+    border-radius: 10px;
+    border: 1px solid myvar.$version4;
+}
+
+
+
+@media (max-width: 1000px) {
+
+    .NavBar__NavLinks{
+        display: none;
+    }
+
+    .NavBarMov__NavLinks{
+        @include mymixin.objectsPosition(flex, column, nowrap, flex-start, start);
+        height: 100vh;
+        width: 100vw;
+        min-width: 320px;
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        background: rgba(0, 0, 0, 0.9);
+        padding-top: 30px;
+        padding-left: 15px;
+        z-index: 10;
+    }
+
+    .NavBar__NavLinks__item{
+        margin-bottom: 30px;
+    }
+
+    .NavBar__NavLinks__item a{
+        @include mymixin.LinkTextForm(myvar.$white, myvar.$fntSizeLg, center);
+    }
+
+    .NavBar__NavLinks__item a:hover{
+        border: 1px solid white;
+    }
+
+    .hide{
+        display: none;
+    }
+
+}

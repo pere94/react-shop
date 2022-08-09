@@ -1,0 +1,16 @@
+@use '../../style/var&mixin/mymixin';
+@use '../../style/var&mixin/myvar';
+
+.container404{
+    width: 100%;
+    height: 100%;
+    @include mymixin.objectsPosition(flex, column, nowrap, center, center);
+}
+
+.container404__img{
+    width: 500px;
+}
+
+.container404__h3 a{
+    @include mymixin.LinkTextForm(myvar.$version4, myvar.$fntSizeLg, center);
+}

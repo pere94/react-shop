@@ -1,0 +1,66 @@
+@use '../../style/var&mixin/myvar';
+
+.search {
+    display: flex;
+    line-height: 28px;
+    align-items: center;
+    position: relative;
+    max-width: 100%;
+    z-index: 1;
+}
+   
+.input {
+    width: 100%;
+    height: 40px;
+    line-height: 28px;
+    padding: 0 1rem;
+    padding-left: 2.5rem;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    outline: none;
+    background-color: #f3f3f4;
+    color: #0d0c22;
+    transition: .3s ease;
+    font-size: myvar.$fntSizeSm;
+}
+
+.input::placeholder {
+    color: #9e9ea7;
+}
+
+.input:focus, input:hover {
+    outline: none;
+    background-color: #fff;
+    box-shadow: 0 0 0 2px rgba(142, 245, 151, 0.1);
+    z-index: 1;
+}
+
+.searchButtonContainer{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 12px rgba(102, 189, 109, 1);
+    position: relative;
+    left: -20px;
+    z-index: 3;
+}
+
+.searchButton{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    fill: myvar.$version1;
+    cursor: pointer;
+    z-index: 4;
+}
+
+.searchButton:hover{
+    box-shadow: 1px 1px 12px rgba(75, 148, 81, 0.9);
+}
+
+
+   
+   
+   
+   
+   

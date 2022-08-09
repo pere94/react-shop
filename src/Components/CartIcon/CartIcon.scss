@@ -1,0 +1,31 @@
+@use '../../style/var&mixin/mymixin';
+@use '../../style/var&mixin/myvar';
+
+.CartIconContainer{
+    @include mymixin.objectsPosition(flex, row, nowrap, end, start);
+    width: 60px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.CartIconContainer__icon{
+    background-color: myvar.$version1;
+    color: white;
+    padding: 5px;
+    border-radius: 15%;
+    width: 50px;
+    height: 40px;
+}
+
+.CartIconContainer__counter{
+    position: relative;
+    top: -5px;
+    left: -5px;
+    @include mymixin.objectsPosition(flex, row, nowrap, center, center);
+    background-color: myvar.$version3;
+    color: white;
+    width: 30px;
+    height: 20px;
+    border-radius: 5px;
+    padding-bottom: 2px;
+}

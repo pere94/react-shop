@@ -1,0 +1,28 @@
+@use '../../style/var&mixin/mymixin';
+@use '../../style/var&mixin/myvar';
+
+.UserNavContainer{
+    @include mymixin.objectsPosition(flex, row, nowrap, space-evenly, center);
+    
+}
+.UserNavContainer p{
+    cursor: pointer;
+}
+
+.UserNavContainer__arrow{
+    margin-right: 20px;
+    margin-left: 5px;
+    cursor: pointer;
+    rotate: 90deg;
+}
+
+@media (max-width: 460px) {
+
+    .UserNavContainer p:nth-child(1){
+        display: none;
+    }
+    
+    .UserNavContainer__arrow{
+        display: none;
+    }
+}

@@ -1,0 +1,76 @@
+@use '../../style/var&mixin/mymixin';
+@use '../../style/var&mixin/myvar';
+
+.ProductGrid{
+    @include mymixin.objectsPosition(flex, column, nowrap, center, center);
+    width: 100%;
+    max-width: 200px;
+    padding: 10px;
+    box-shadow: 1px 1px 12px rgba(0,0,0,0.1);
+    margin-right: 15px;
+    margin-bottom: 15px;
+    border-radius:20px;
+    cursor: pointer;
+}
+
+.ProductGrid:hover{
+    box-shadow: 1px 1px 12px rgba(0,0,0,0.2);
+}
+
+.ProductGrid__img{
+    object-fit: cover;
+    width: 90%;
+    max-width: 200px;
+    height: 200px;
+    object-position: bottom;
+    size: cover;
+    border-radius: 10px;
+}
+
+.ProductGrid__info{
+    @include mymixin.objectsPosition(flex, row, nowrap, center, center);
+    font-size: myvar.$fntSizeExSm;
+    padding: 10px;
+    padding-bottom: 0px;
+}
+
+.ProductGrid__info-left{
+    width: 140px;
+    height: 60px;
+    overflow: hidden;
+}
+
+.ProductGrid__left-price{
+    font-weight: bold;
+    color: myvar.$version2;
+}
+
+.ProductGrid__left-name{
+    padding: 0px 5px;
+    width: 100%;
+    height: 40px;
+    color: grey;
+    // font-size: myvar.$fntSizeExxxSm;
+}
+
+.ProductGrid__right-cart{
+    @include mymixin.objectsPosition(flex, row, nowrap, center, center);
+}
+
+.cart{
+    background-color: myvar.$version1;
+    color: white;
+    padding: 5px;
+    border-radius: 15%;
+    width: 30px;
+    height: 30px;
+}
+
+.cart:active{
+    scale: 0.9;
+}
+
+.checkedIcon{
+    color: myvar.$version2;
+}
+

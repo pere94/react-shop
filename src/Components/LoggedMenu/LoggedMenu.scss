@@ -1,0 +1,58 @@
+@use '../../style/var&mixin/mymixin';
+@use '../../style/var&mixin/myvar';
+
+.LoggedMenuContainer{
+    scale: 0.1;
+    transition: scale 0.5s;
+    visibility: hidden;
+
+    position: absolute;
+    top: 60px;
+    right: 80px;
+    z-index: 7;
+
+    padding: 25px;
+    max-width: 200px;
+    box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    @include mymixin.objectsPosition(flex, column, nowrap, center, center);
+    background-color: white;
+
+}
+
+.LoggedMenuContainer a{
+    width: 100%;
+    text-decoration: none;
+    color: myvar.$version4;
+    font-size: myvar.$fntSizeSm;
+    margin-bottom: 15px;
+    text-align: right;
+}
+
+.LoggedMenuContainer a:nth-child(3){
+    border-top: 1px solid myvar.$version1;
+    margin-top: 10px;
+    padding-top: 15px;
+    margin-bottom: 5px;
+}
+
+.LoggedMenuContainer a:hover{
+    text-decoration: underline;
+}
+
+.visible{
+    scale: 1;
+    visibility: visible;
+}
+
+@media (max-width: 460px) {
+
+    .LoggedMenuContainer{
+        right: 20px;
+    }
+
+    .hide{
+        scale: 1;
+        visibility: visible;
+    }
+}

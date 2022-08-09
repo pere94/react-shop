@@ -1,0 +1,59 @@
+@use '../../style/var&mixin/myvar';
+
+.SelectContainer{
+    border-radius: 10px;
+    box-shadow:  1px 1px 12px rgba(0, 0, 0, 0.1);
+    padding: 10px 15px;
+    border: none;
+    width: 100%;
+    position: relative;
+
+}
+
+.SelectContainer__select{
+    font-size: myvar.$fntSizeSm;
+    background: white;
+    width: 100%;
+    min-width: 100px;
+    border: none;
+    color: myvar.$version4;
+    appearance: none;
+}
+
+.SelectContainer__customArrow{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    display: block;
+    background-color: white;
+    width: 40px;
+    height: 100%;
+    pointer-events: none;
+}
+
+.SelectContainer__customArrow::before,
+.SelectContainer__customArrow::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.SelectContainer__customArrow::before{
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid myvar.$version4;
+
+    top: 40%;
+}
+
+.SelectContainer__customArrow::after{
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid myvar.$version4;
+
+    top: 60%;
+}

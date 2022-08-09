@@ -1,0 +1,10 @@
+@use '../../style/var&mixin/mymixin';
+@use '../../style/var&mixin/myvar';
+
+.Grid{
+    // position: relative;
+    width: 100%;
+    height: 100%;
+    @include mymixin.objectsPosition(flex, row, wrap, center, center);
+    // z-index: 1;
+}

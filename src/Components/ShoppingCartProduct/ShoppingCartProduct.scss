@@ -1,0 +1,59 @@
+@use '../../style/var&mixin/mymixin';
+@use '../../style/var&mixin/myvar';
+
+
+.ShoppingCartProductContainer{
+    height: 80px;
+    width: 95%;
+    min-width: 300px;
+    @include mymixin.objectsPosition(flex, row, nowrap, space-between, center);
+    box-shadow: 1px 1px 12px rgba(0,0,0,0.1);
+    border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.ShoppingCartProductContainer:hover{
+    box-shadow: 1px 1px 12px rgba(0,0,0,0.2);
+}
+
+.ShoppingCartProduct__img{
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+}
+
+.ShoppingCartProduct__name{
+    height: 100%;
+    width: 100%;
+    min-width: 120px;
+    overflow: hidden;
+    padding: 10px 5px;
+    @include mymixin.LinkTextForm(grey, myvar.$fntSizeSm, left);
+    @include mymixin.objectsPosition(flex, row, nowrap, center, center);
+}
+
+.ShoppingCartProduct__price{
+    min-width: 50px;
+    @include mymixin.LinkTextForm(myvar.$version4, myvar.$fntSizeSm, center);
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.ShoppingCartProductContainer__delete{
+    background-color: myvar.$version1;
+    color: white;
+    width: 33px;
+    min-width: 33px;
+    height: 32px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.ShoppingCartProductContainer__delete:active{
+    scale: 0.9;
+}

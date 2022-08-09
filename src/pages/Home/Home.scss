@@ -1,0 +1,42 @@
+@use '../../style/var&mixin/mymixin';
+@use '../../style/var&mixin/myvar';
+
+.HomeContainer{
+    @include mymixin.objectsPosition(flex, column, nowrap, center, center);
+    position: absolute;
+    top: 60px;
+    min-width: 340px;
+}
+
+.HomeContainer__searchFilter{
+    width: 80vw;
+    height: 25vh;
+    min-height: 170px;
+    @include mymixin.objectsPosition(flex, row, wrap, flex-start, center);
+    padding: 20px;
+}
+
+.HomeContainer__searchFilter-search{
+    min-width: 300px;
+    width: 30vw;
+}
+
+.HomeContainer__searchFilter-order{
+    min-width: 200px;
+    width: 10vw;
+}
+
+.HomeContainer__ProductGrid{
+    @include mymixin.objectsPosition(flex, column, nowrap, center, center);
+}
+
+
+
+@media (max-width: 400px ) {
+    
+    .HomeContainer__searchFilter{
+        width: 90vw;
+        padding: 5px;
+    }
+
+}
